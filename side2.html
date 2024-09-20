@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <title>SkatteJagt - Side2</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="spilKasse">
+  <h1 class="header">Dette er side 2 af skattejagten</h1>
+  <p class="para">Jeg er en meget lille mand, som hviler på en kæmpe skærm. Jeg sidder helt stille på en gade, opkaldt efter en mand fra Aarhus, der elskede at se på stjerner. Hvis du finder mig og klapper mig blidt på hovedet, vil jeg afsløre det næste bogstav. </p>
+  <input type="text" id="kode" placeholder="Indtast kode her">
+  <button onclick="tjekKode()">Indtast kode</button>
+  <p id="besked"></p>
+</div>
+
+<script>
+  function tjekKode() {
+    var kode = document.getElementById("kode").value;
+    var korrektKode = "o"; // Definer kun én korrekt kode
+
+    // Tjekker om koden er lig med korrektKode uanset store eller små bogstaver
+    if (kode.toLowerCase() === korrektKode.toLowerCase()) {
+      window.location.href = "side3.html"; // Omdirigerer til side 2
+    } else {
+      document.getElementById("besked").innerText = "Niks!";
+    }
+  }
+
+</script>
+</body>
+</html>

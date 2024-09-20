@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <title>SkatteJagt - Side 3</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="spilKasse">
+  <h1 class="header">Dette er side 3 af skattejagten</h1>
+  <p class="para">Jeg er verdens 12. farligste dyr, du har helt sikkert set mig før, men nok ikke lagt mærke til mig. Jeg så dig senest til en fødselsdagsfest, der måske var en lille smule akavet. Klap mig blidt i numsen, så får du næste bogstav:)</p>
+  <input type="text" id="kode" placeholder="Indtast kode her">
+  <button onclick="tjekKode()">Indtast kode</button>
+  <p id="besked"></p>
+</div>
+
+<script>
+  function tjekKode() {
+    var kode = document.getElementById("kode").value;
+    var korrektKode = "t"; // Definer kun én korrekt kode
+
+    // Tjekker om koden er lig med korrektKode uanset store eller små bogstaver
+    if (kode.toLowerCase() === korrektKode.toLowerCase()) {
+      window.location.href = "side4.html"; // Omdirigerer til side 2
+    } else {
+      document.getElementById("besked").innerText = "Niks!";
+    }
+  }
+
+</script>
+</body>
+</html>

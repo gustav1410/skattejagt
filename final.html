@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>SkatteJagt - Final</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="spilKasse">
+    <h1 class="header">Tillykke</h1>
+    <p class="para">Wuhu - Du er mega sej og har fundet alle bogstaver. Indsæt alle bogstaver i rækkefølge og se din gave</p>
+    <input type="text" id="kode" placeholder="Indtast kode her">
+    <button onclick="tjekKode()">Indsend kode</button>
+    <p id="besked"></p>
+    <p id="final"></p>
+</div>
+
+<!-- Tilføj Canvas Confetti biblioteket -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+<script>
+    function tjekKode() {
+        var kode = document.getElementById("kode").value;
+        var korrektKode = "sota"; // Definer kun én korrekt kode
+
+        // Tjekker om koden er lig med korrektKode uanset store eller små bogstaver
+        if (kode.toLowerCase() === korrektKode.toLowerCase()) {
+            // Vis besked
+            document.getElementById("final").innerHTML = 'Vi skal ud og spise Sushi! All you can eat på pappa G\'s regning. Vi skal selvfølgelig spise på <a href="https://sotasushibar.dk/" target="_blank">SOTA</a>!';
+
+            // Fyrværkeri animation
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 } // Justering for at affyre det lidt højere på skærmen
+            });
+
+        } else {
+            document.getElementById("besked").innerText = "Niks!";
+        }
+    }
+</script>
+
+</body>
+</html>

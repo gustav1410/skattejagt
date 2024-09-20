@@ -1,0 +1,61 @@
+/* styles.css */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-image: url("https://danmarkshistorien.dk/fileadmin/filer/Billeder/Artikelbilleder/Kulturliv_Aarhus_1900_2017/Skt-Clemens-Bro-Aarhus-1897Den-Gamle-Bys-Billedarkiv.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.para{
+    color: darkgray;
+    font-family: "Times New Roman", sans-serif;
+    font-weight: bolder;
+}
+
+.spilKasse {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 90%; /* Sikrer, at boksen ikke bliver for bred på små skærme */
+    width: 400px; /* Standardbredde for større skærme */
+}
+
+input {
+    width: 100%; /* Gør inputfeltet responsivt */
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%; /* Gør knappen responsiv */
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* For små skærme (mobiler) */
+@media (max-width: 600px) {
+    .spilKasse {
+        width: 100%; /* Gør kassen fuldt bredde på små skærme */
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em; /* Tilpas fontstørrelse for små skærme */
+    }
+}

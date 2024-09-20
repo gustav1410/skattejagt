@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <title>SkatteJagt - Side 4</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="spilKasse">
+  <h1 class="header">Dette er side 4 af skattejagten</h1>
+  <p class="para">Jeg var engang frygtet, men har aldrig taget et menneskeliv. Selvom jeg er uddød for længe siden, findes mit fodaftryk stadig, tæt ved et sted, hvor lysende kugler falder fra himlen i lidt over en uge.
+  </p>
+  <input type="text" id="kode" placeholder="Indtast kode her">
+  <button onclick="tjekKode()">Indtast kode her</button>
+  <p id="besked"></p>
+</div>
+
+<script>
+  function tjekKode() {
+    var kode = document.getElementById("kode").value;
+    var korrektKode = "a"; // Definer kun én korrekt kode
+
+    // Tjekker om koden er lig med korrektKode uanset store eller små bogstaver
+    if (kode.toLowerCase() === korrektKode.toLowerCase()) {
+      window.location.href = "final.html"; // Omdirigerer til side 2
+    } else {
+      document.getElementById("besked").innerText = "Niks!";
+    }
+  }
+
+</script>
+</body>
+</html>
